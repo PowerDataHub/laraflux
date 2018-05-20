@@ -34,7 +34,7 @@ class ServiceProvider extends LaravelServiceProvider
      */
     public function register()
     {
-        $this->app->singleton(InfluxDB::class, function($app) {
+        $this->app->singleton(InfluxDB::class, function ($app) {
             $client = new InfluxClient(
                 config('influxdb.host'),
                 config('influxdb.port'),

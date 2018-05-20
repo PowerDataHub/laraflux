@@ -25,10 +25,10 @@
     },
     "minimum-stability": "dev",
     "extra": {
-    "laravel": {
-        "providers": [
-          "PowerDataHub\\Laraflux\\ServiceProvider"
-        ]
-      }
+        "laravel": {
+            "providers": [
+              "PowerDataHub\\Laraflux\\Providers\\ServiceProvider"
+            ]
+        }
     }
 }

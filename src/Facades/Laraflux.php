@@ -5,7 +5,7 @@ namespace PowerDataHub\Laraflux\Facades;
 use Illuminate\Support\Facades\Facade as LaravelFacade;
 use InfluxDB\Database;
 
-class InfluxDB extends LaravelFacade
+class Laraflux extends LaravelFacade
 {
     /**
      * Get the registered name of the component.
