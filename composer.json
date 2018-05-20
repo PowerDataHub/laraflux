@@ -1,0 +1,34 @@
+{
+	"name": "power-data-hub/laraflux",
+    "description": "A service made to provide, set up and use influxphp in Laravel.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Power Data Hub",
+            "email": "bizarro@brate.co"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "PowerDataHub\\Laraflux\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^7.1.3",
+        "influxdb/influxdb-php": "^1.14"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.6",
+        "phpunit/phpunit": "^7.0",
+        "friendsofphp/php-cs-fixer": "^2.11"
+    },
+    "minimum-stability": "dev",
+    "extra": {
+    "laravel": {
+        "providers": [
+          "PowerDataHub\\Laraflux\\ServiceProvider"
+        ]
+      }
+    }
+}
