@@ -27,7 +27,7 @@ PowerDataHub\Laraflux\ServiceProvider::class
 ```
 'aliases' => [
 //  ...
-    'InfluxDB' => PowerDataHub\Laraflux\Facades\InfluxDB::class,
+    'Laraflux' => PowerDataHub\Laraflux\Facades\Laraflux::class,
 ]
 ```
 
@@ -56,7 +56,7 @@ php artisan vendor:publish
 <?php
 
 // executing a query will yield a resultset object
-$result = InfluxDB::query('select * from test_metric LIMIT 5');
+$result = Laraflux::query('select * from test_metric LIMIT 5');
 
 // get the points from the resultset yields an array
 $points = $result->getPoints();
@@ -68,24 +68,24 @@ $points = $result->getPoints();
 <?php
 
 // create an array of points
-$points = array(
-    new InfluxDB\Point(
+$points = [
+    new \InfluxDB\Point(
         'test_metric', // name of the measurement
         null, // the measurement value
         ['host' => 'server01', 'region' => 'us-west'], // optional tags
         ['cpucount' => 10], // optional additional fields
         time() // Time precision has to be set to seconds!
     ),
-    new InfluxDB\Point(
+    new \InfluxDB\Point(
         'test_metric', // name of the measurement
         null, // the measurement value
         ['host' => 'server01', 'region' => 'us-west'], // optional tags
         ['cpucount' => 10], // optional additional fields
         time() // Time precision has to be set to seconds!
     )
-);
+];
 
-$result = InfluxDB::writePoints($points, \InfluxDB\Database::PRECISION_SECONDS);
+$result = Laraflux::writePoints($points, \InfluxDB\Database::PRECISION_SECONDS);
 ```
 
 License
