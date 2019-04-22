@@ -1,4 +1,4 @@
-[![Maintained by Powerdatahub.com](https://img.shields.io/badge/maintained%20by-powerdatahub.com-%233D4DFE.svg?style=for-the-badge)](https://powerdatahub.com/?ref=repo_aws_airflow)
+[![Maintained by Powerdatahub.com](https://img.shields.io/badge/maintained%20by-powerdatahub.com-%233D4DFE.svg?style=for-the-badge)](https://powerdatahub.com/?ref=laraflux)
 
 # Laravel Influxdb
 
